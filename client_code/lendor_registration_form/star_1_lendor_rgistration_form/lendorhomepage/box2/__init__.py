@@ -15,6 +15,14 @@ class box2(box2Template):
 
     self.repeating_panel_vb.items = app_tables.view_bor_loan_requests.search()
 
+  def calculate(self, **event_args):
+    #view_available_balance = float(view_available_balance)
+    initial_commitment = float(initial_commitment.text)
+    view_available_balance = int(initial_commitment+0)-(12)
+
+    self.output_lbl.text = f"{view_available_balance}"
+    
+
    # anvil.server.call('view_bor_loan_requests', view_available_balance)
 
   #def edit_view_available_balance(self):
