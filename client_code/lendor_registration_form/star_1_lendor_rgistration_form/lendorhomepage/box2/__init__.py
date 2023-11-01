@@ -9,29 +9,34 @@ from anvil.google.drive import app_files
 import anvil.users
 
 class box2(box2Template):
-  def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
-    self.init_components(**properties)
+    def __init__(self, **properties):
+        # Set Form properties and Data Bindings.
+        self.init_components(**properties)
 
-    self.repeating_panel_vb.items = app_tables.view_bor_loan_requests.search()
+        # Query your data
+        data = app_tables.view_bor_loan_requests.get()   # Assuming you want the first record
 
-  def calculate(self, **event_args):
-    #view_available_balance = float(view_available_balance)
-    initial_commitment = float(initial_commitment.text)
-    view_available_balance = int(initial_commitment+0)-(12)
+        if data:
+            initial_commitment = data['Initial Commitment']
+            top_up = data['Top Up']
+            total_loan_disbursed = data['Total Loan Disbursed']
 
-    self.output_lbl.text = f"{view_available_balance}"
+            available_balance = initial_commitment + top_up - total_loan_disbursed
+
+            self.output_lbl.text = str(available_balance)
+        else:
+            self.output_lbl.text = "No data available"
+
+    # ... (your other methods)
+
     
 
    # anvil.server.call('view_bor_loan_requests', view_available_balance)
 
-  #def edit_view_available_balance(self):
-    #view_available_balance =  self.view_available_balance
 
-    #self.output_lbl.text = f"{view_available_balance}"
-  # Any code you write here will run before the form opens.
+   
 
-  def button_1_click(self, **event_args):
+    '''def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form("lendor_registration_form.star_1_lendor_rgistration_form.lendorhomepage")
 
@@ -69,4 +74,4 @@ class box2(box2Template):
 
   def link_9_click(self, **event_args):
     """This method is called when the link is clicked"""
-    open_form("lendor_registration_form.star_1_lendor_rgistration_form.lendorhomepage.box10")
+    open_form("lendor_registration_form.star_1_lendor_rgistration_form.lendorhomepage.box10")'''
