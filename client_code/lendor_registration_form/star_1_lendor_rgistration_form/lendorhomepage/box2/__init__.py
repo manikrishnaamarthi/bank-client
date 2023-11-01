@@ -17,13 +17,13 @@ class box2(box2Template):
         data = app_tables.view_bor_loan_requests.get()   # Assuming you want the first record
 
         if data:
-            initial_commitment = data['Initial Commitment']
-            top_up = data['Top Up']
-            total_loan_disbursed = data['Total Loan Disbursed']
+            initial_commitment = data['initial_commitment']
+            top_up = data['top_up']
+            total_loan_disbursed = data['total_loan_disbursed']
 
             available_balance = initial_commitment + top_up - total_loan_disbursed
 
-            self.output_lbl.text = str(available_balance)
+            self.output_lbl.text = (available_balance)
         else:
             self.output_lbl.text = "No data available"
 
