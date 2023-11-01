@@ -1,6 +1,7 @@
 unique_ids:
   forms:
     borrower_registration_form.Form14: '1698332627517231431289949.0756'
+    lendor_registration_form.star_1_lendor_rgistration_form.lendorhomepage.box2.RowTemplate4: '1698821339861385880141121.9519'
     borrower_registration_form.Form8: '1698323028822936850079159.5704'
     borrower_registration_form.Form5: '1698316928101144485829359.4584'
     borrower_registration_form.star_2_borrower_registration_form_step_2: '1698052393935225644542399.73087'
@@ -28,6 +29,7 @@ unique_ids:
     borrower_registration_form.Form15: '1698332889731856919358856.042'
     lendor_registration_form.star_1_lendor_rgistration_form.lendorhomepage.box3: '1698673208769542794018932.42316'
     bank_users.main_form.about_main_form: '1697797228207989144224833.6753'
+    lendor_registration_form.star_1_lendor_rgistration_form.lendorhomepage.box2.ItemTemplate2: '1698823743966697644688078.572'
     borrower_registration_form.star_1_borrower_registration_form: '1698229547916526360415191.1219'
     lendor_registration_form.star_1_lendor_rgistration_form.lendorhomepage.box6: '1698673452718156614619112.44577'
     borrower_registration_form.star_3_borrower_registration_form_step_1: '169805564800938248701223.703606'

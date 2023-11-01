@@ -16,9 +16,11 @@ class box2(box2Template):
     self.repeating_panel_vb.items = app_tables.view_bor_loan_requests.search()
 
    # anvil.server.call('view_bor_loan_requests', view_available_balance)
-    view_available_balance =  view_available_balance
 
-    self.output_lbl.text = f" Your view available balance{view_available_balance}"
+  #def edit_view_available_balance(self):
+    #view_available_balance =  self.view_available_balance
+
+    #self.output_lbl.text = f"{view_available_balance}"
   # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
