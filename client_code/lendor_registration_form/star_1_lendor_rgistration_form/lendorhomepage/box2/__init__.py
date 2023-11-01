@@ -1,5 +1,8 @@
 from ._anvil_designer import box2Template
 from anvil import *
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 import anvil.server
 import anvil.google.auth, anvil.google.drive
 from anvil.google.drive import app_files
@@ -10,7 +13,13 @@ class box2(box2Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
+    self.repeating_panel_vb.items = app_tables.view_bor_loan_requests.search()
+
+   # anvil.server.call('view_bor_loan_requests', view_available_balance)
+    view_available_balance =  view_available_balance
+
+    self.output_lbl.text = f" Your view available balance{view_available_balance}"
+  # Any code you write here will run before the form opens.
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
